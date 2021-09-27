@@ -12,13 +12,24 @@ class MsApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Mobile Shielding'),
         ),
-        body: Card(
-          child: Column(
-            children: <Widget>[
-              Image.asset('assets/MobileShieldingLogo.jpg'),
-              Text('Mobile Shielding Text')
-            ],
-          ),
+        body: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text('Submit'),
+              ),
+            ),
+            Card(
+              child: Column(
+                children: <Widget>[
+                  Text('Mobile Shielding'),
+                  Image.asset('assets/MobileShieldingLogo.jpg')
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
