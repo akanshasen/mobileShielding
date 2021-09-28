@@ -20,7 +20,7 @@ class _MsLoginPageState extends State<LoginPage> {
               children: [
                 Container(
                   padding: EdgeInsets.only(
-                      top: 35.0, left: 20.0, right: 20.0, bottom: 20.0),
+                      top: 45.0, left: 20.0, right: 20.0, bottom: 30.0),
                   child: Column(
                     children: <Widget>[
                       Text(
@@ -66,6 +66,8 @@ class _MsLoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Container(
+                  height: 50.0,
+                  width: 400.0,
                   margin: EdgeInsets.all(70.0),
                   child: ElevatedButton(
                     onPressed: () {
