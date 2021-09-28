@@ -16,17 +16,11 @@ class _MsLoginPageState extends State<LoginPage> {
         },
         home: Builder(
           builder: (context) => Scaffold(
-            appBar: AppBar(
-              leading: IconButton(
-                icon: Icon(Icons.menu),
-                onPressed: () {},
-              ),
-              backgroundColor: Color(0xff790507),
-              title: Text('Mobile Shielding App'),
-            ),
             body: Column(
               children: [
                 Container(
+                  padding: EdgeInsets.only(
+                      top: 35.0, left: 20.0, right: 20.0, bottom: 20.0),
                   child: Column(
                     children: <Widget>[
                       Text(
@@ -49,12 +43,12 @@ class _MsLoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
+                  padding: EdgeInsets.only(top: 40.0, left: 20.0, right: 20.0),
                   child: Column(
                     children: <Widget>[
                       TextField(
                         decoration: InputDecoration(
-                            labelText: 'Email',
+                            labelText: 'User name',
                             labelStyle: TextStyle(
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
@@ -72,13 +66,13 @@ class _MsLoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.all(10.0),
+                  margin: EdgeInsets.all(70.0),
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => HomePage()));
                     },
-                    //onPressed: () => {'/homepageButtons'},
+                    style: ElevatedButton.styleFrom(primary: Colors.red),
                     child: Text('Login'),
                   ),
                 ),
