@@ -15,8 +15,11 @@ class _MsLoginPageState extends State<LoginPage> {
       },
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(icon: Icon(Icons.menu), onPressed: (){
+
+          },),
           backgroundColor: Color(0xff790507),
-          title: Text('Mobile Shielding App from new loginpage'),
+          title: Text('Mobile Shielding App'),
         ),
         body: Column(
           children: [
