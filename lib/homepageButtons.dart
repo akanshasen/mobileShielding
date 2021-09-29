@@ -40,92 +40,82 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 50),
+                  padding: EdgeInsets.only(top: 140),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.only(right: 50),
+                        padding: EdgeInsets.only(right: 10),
+                        child: Container(
+                          height: 70.0,
+                          width: 180.0,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.deepOrangeAccent),
+                            child: Text(
+                              'Scan App',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 70.0,
+                        width: 180.0,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
                               primary: Colors.deepOrangeAccent),
                           child: Text(
-                            'Scan App',
+                            'Find Threats',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.deepOrangeAccent),
-                        child: Text(
-                          'Find Threats',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
+                      )
                     ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 50),
+                  padding: EdgeInsets.only(top: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.only(right: 50),
+                        padding: EdgeInsets.only(right: 10),
+                        child: Container(
+                          height: 70.0,
+                          width: 180.0,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.deepOrangeAccent),
+                            child: Text(
+                              'Scan App',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 70.0,
+                        width: 180.0,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
                               primary: Colors.deepOrangeAccent),
                           child: Text(
-                            'Scan App',
+                            'Find Threats',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.deepOrangeAccent),
-                        child: Text(
-                          'Find Threats',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
+                      )
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
         ));
   }
 }
-
-// class GridLayout extends StatelessWidget {
-//   List<String> events = [
-//     "Scan Apps",
-//     "Scan WiFi",
-//     "Find Threats",
-//     "Clean Device"
-//   ];
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Container(
-//         child: Container(
-//           margin: const EdgeInsets.only(top: 120.0),
-//           child: GridView(
-//             physics: BouncingScrollPhysics(),
-//             gridDelegate:
-//                 SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-//Scaffold creates a white background, allows for ability to add app bar etc.
