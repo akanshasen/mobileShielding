@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobileshielding/scanAppPage.dart';
 
 const TWO_PI = 3.14 * 2;
 
@@ -6,6 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = 300.0;
+
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Builder(
@@ -64,7 +66,6 @@ class HomePage extends StatelessWidget {
                                     "    $percentage%" + "\nOptimized",
                                     style: TextStyle(fontSize: 50),
                                   ),
-
                                 ),
                               ),
                             ),
@@ -85,12 +86,18 @@ class HomePage extends StatelessWidget {
                           height: 70.0,
                           width: 180.0,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //         builder: (context) => ScanAppPage()));
+                            },
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.deepOrangeAccent),
                             child: Text(
                               'Scan App',
-                              style: TextStyle(color: Colors.white),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 23),
                             ),
                           ),
                         ),
@@ -104,7 +111,7 @@ class HomePage extends StatelessWidget {
                               primary: Colors.deepOrangeAccent),
                           child: Text(
                             'Find Threats',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.white, fontSize: 23),
                           ),
                         ),
                       )
@@ -126,8 +133,9 @@ class HomePage extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.deepOrangeAccent),
                             child: Text(
-                              'Scan App',
-                              style: TextStyle(color: Colors.white),
+                              'Scan WiFi',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 23),
                             ),
                           ),
                         ),
@@ -140,8 +148,8 @@ class HomePage extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                               primary: Colors.deepOrangeAccent),
                           child: Text(
-                            'Find Threats',
-                            style: TextStyle(color: Colors.white),
+                            'Clean Device',
+                            style: TextStyle(color: Colors.white, fontSize: 23),
                           ),
                         ),
                       )
