@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
+const TWO_PI = 3.14 * 2;
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final size = 300.0;
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Builder(
@@ -17,30 +20,62 @@ class HomePage extends StatelessWidget {
             ),
             body: Column(
               children: [
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        'Mobile Shielding Home Page',
-                        style: TextStyle(
-                            fontSize: 30.0, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                ),
-                Card(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset(
-                        'assets/MobileShieldingLogo.jpg',
-                        height: 200,
-                        width: 200,
-                      )
-                    ],
+                Padding(
+                  padding: EdgeInsets.only(top: 50.0),
+                  child: TweenAnimationBuilder(
+                    tween: Tween(begin: 0.0, end: 1.0),
+                    duration: Duration(seconds: 5),
+                    builder: (context, double value, child) {
+                      int percentage = (value * 100).ceil();
+                      return Container(
+                        width: size,
+                        height: size,
+                        child: Stack(
+                          children: [
+                            ShaderMask(
+                              shaderCallback: (rect) {
+                                return SweepGradient(
+                                    startAngle: 0.0,
+                                    endAngle: TWO_PI,
+                                    stops: [value, value],
+                                    center: Alignment.center,
+                                    colors: [
+                                      Colors.green,
+                                      Colors.grey.withAlpha(55)
+                                    ]).createShader(rect);
+                              },
+                              child: Container(
+                                width: size,
+                                height: size,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white),
+                              ),
+                            ),
+                            Center(
+                              child: Container(
+                                width: size - 40,
+                                height: size - 40,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    shape: BoxShape.circle),
+                                child: Center(
+                                  child: Text(
+                                    "    $percentage%" + "\nOptimized",
+                                    style: TextStyle(fontSize: 50),
+                                  ),
+
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 140),
+                  padding: EdgeInsets.only(top: 70),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
