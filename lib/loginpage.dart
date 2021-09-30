@@ -16,7 +16,15 @@ class _MsLoginPageState extends State<LoginPage> {
         },
         home: Builder(
           builder: (context) => Scaffold(
-            body: Column(
+              body: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0x88972C2C), Colors.white],
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+              ),
+            ),
+            child: Column(
               children: [
                 Container(
                   padding: EdgeInsets.only(
@@ -31,56 +39,89 @@ class _MsLoginPageState extends State<LoginPage> {
                     ],
                   ),
                 ),
-                Card(
+                Container(
+                  color: Colors.transparent,
                   child: Column(
                     children: <Widget>[
-                      Image.asset(
-                        'assets/MobileShieldingLogo.jpg',
-                        height: 200,
-                        width: 200,
-                      )
+                      CircleAvatar(
+                        backgroundImage:
+                            AssetImage('assets/MobileShieldingLogo.jpg'),
+                        radius: 100,
+                      ),
                     ],
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 40.0, left: 20.0, right: 20.0),
+                  padding: EdgeInsets.only(
+                    top: 40.0,
+                    left: 50.0,
+                    right: 50.0,
+                  ),
                   child: Column(
                     children: <Widget>[
-                      TextField(
-                        decoration: InputDecoration(
-                            labelText: 'User name',
-                            labelStyle: TextStyle(
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black)),
+                      Container(
+                        height: 55.0,
+                        child: TextField(
+                          decoration: InputDecoration(
+                              labelText: 'User name',
+                              labelStyle: TextStyle(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.white
+                              ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.transparent)
+                            )
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(50.0)),
+                            color: Colors.black54),
+                        padding: EdgeInsets.all(10.0),
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                            labelText: 'Password',
-                            labelStyle: TextStyle(
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black)),
-                      )
+                      Container(
+                        padding: EdgeInsets.all(15.0),
+                      ),
+
+                      Container(
+                        height: 55.0,
+                        child: TextField(
+                          decoration: InputDecoration(
+                              labelText: 'Password',
+                              labelStyle: TextStyle(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.white)),
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(50.0)),
+                            color: Colors.black54),
+                        padding: EdgeInsets.all(10.0),
+                      ),
                     ],
                   ),
                 ),
                 Container(
                   height: 50.0,
-                  width: 400.0,
+                  width: 250.0,
                   margin: EdgeInsets.all(70.0),
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => HomePage()));
                     },
-                    style: ElevatedButton.styleFrom(primary: Colors.red),
-                    child: Text('Login'),
+                    style: ElevatedButton.styleFrom(primary: Color(0xff790507)),
+                    child: Text(
+                      "Login",
+                      style: TextStyle(fontSize: 20.0),
+                    ),
                   ),
                 ),
               ],
             ),
-          ),
+          )),
         ));
   }
 //Scaffold creates a white background, allows for ability to add app bar etc.
