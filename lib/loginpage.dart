@@ -106,7 +106,7 @@ class _MsLoginPageState extends State<LoginPage> {
                 Container(
                   height: 50.0,
                   width: 250.0,
-                  margin: EdgeInsets.all(70.0),
+                  margin: EdgeInsets.all(50.0),
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
