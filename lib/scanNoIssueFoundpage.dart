@@ -3,7 +3,7 @@ import 'package:mobileshielding/scanAppPage.dart';
 
 const TWO_PI = 3.14 * 2;
 
-class HomePage extends StatelessWidget {
+class ScanNoIssueFound extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = 300.0;
@@ -24,56 +24,6 @@ class HomePage extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(top: 50.0),
-                  child: TweenAnimationBuilder(
-                    tween: Tween(begin: 0.0, end: 1.0),
-                    duration: Duration(seconds: 5),
-                    builder: (context, double value, child) {
-                      int percentage = (value * 100).ceil();
-                      return Container(
-                        width: size,
-                        height: size,
-                        child: Stack(
-                          children: [
-                            ShaderMask(
-                              shaderCallback: (rect) {
-                                return SweepGradient(
-                                    startAngle: 0.0,
-                                    endAngle: TWO_PI,
-                                    stops: [value, value],
-                                    center: Alignment.center,
-                                    colors: [
-                                      Colors.green,
-                                      Colors.grey.withAlpha(55)
-                                    ]).createShader(rect);
-                              },
-                              child: Container(
-                                width: size,
-                                height: size,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.white),
-                              ),
-                            ),
-                            Center(
-                              child: Container(
-                                width: size - 40,
-                                height: size - 40,
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle),
-                                child: Center(
-                                  child: Text(
-                                    "    $percentage%" + "\nOptimized",
-                                    style: TextStyle(fontSize: 50),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 70),
@@ -97,7 +47,7 @@ class HomePage extends StatelessWidget {
                             child: Text(
                               'Scan App',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 23),
+                              TextStyle(color: Colors.white, fontSize: 23),
                             ),
                           ),
                         ),
@@ -135,7 +85,7 @@ class HomePage extends StatelessWidget {
                             child: Text(
                               'Scan WiFi',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 23),
+                              TextStyle(color: Colors.white, fontSize: 23),
                             ),
                           ),
                         ),
