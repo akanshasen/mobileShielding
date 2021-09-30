@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Builder(
           builder: (context) => Scaffold(
+            backgroundColor: Color(),
             appBar: AppBar(
               leading: IconButton(
                 icon: Icon(Icons.menu),
