@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobileshielding/scanAppPage.dart';
+import 'package:mobileshielding/scanThreatsPage.dart';
 
 const TWO_PI = 3.14 * 2;
 
@@ -110,7 +111,12 @@ class HomePage extends StatelessWidget {
                             height: 70.0,
                             width: 180.0,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ScanThreatsPage()));
+                              },
                               style: ElevatedButton.styleFrom(
                                   primary: Colors.deepOrangeAccent),
                               child: Text(
