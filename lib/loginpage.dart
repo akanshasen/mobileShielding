@@ -10,13 +10,13 @@ class _MsLoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        routes: <String, WidgetBuilder>{
-          '/homepageButtons': (BuildContext context) => new HomePage()
-        },
-        home: Builder(
-          builder: (context) => Scaffold(
-              body: Container(
+      debugShowCheckedModeBanner: false,
+      routes: <String, WidgetBuilder>{
+        '/homepageButtons': (BuildContext context) => new HomePage()
+      },
+      home: Builder(
+        builder: (context) => Scaffold(
+          body: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0x88972C2C), Colors.white],
@@ -28,13 +28,19 @@ class _MsLoginPageState extends State<LoginPage> {
               children: [
                 Container(
                   padding: EdgeInsets.only(
-                      top: 45.0, left: 20.0, right: 20.0, bottom: 30.0),
+                    top: 45.0,
+                    left: 20.0,
+                    right: 20.0,
+                    bottom: 30.0,
+                  ),
                   child: Column(
                     children: <Widget>[
                       Text(
                         'Mobile Shielding',
                         style: TextStyle(
-                            fontSize: 30.0, fontWeight: FontWeight.bold),
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ],
                   ),
@@ -63,41 +69,46 @@ class _MsLoginPageState extends State<LoginPage> {
                         height: 55.0,
                         child: TextField(
                           decoration: InputDecoration(
-                              labelText: 'User name',
-                              labelStyle: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.normal,
-                                  color: Colors.white
-                              ),
+                            labelText: 'User name',
+                            labelStyle: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.white,
+                            ),
                             focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.transparent)
-                            )
+                              borderSide: BorderSide(color: Colors.transparent),
+                            ),
                           ),
                         ),
                         decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(50.0)),
-                            color: Colors.black54),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(50.0),
+                          ),
+                          color: Colors.black54,
+                        ),
                         padding: EdgeInsets.all(10.0),
                       ),
                       Container(
                         padding: EdgeInsets.all(15.0),
                       ),
-
                       Container(
                         height: 55.0,
                         child: TextField(
                           decoration: InputDecoration(
-                              labelText: 'Password',
-                              labelStyle: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.normal,
-                                  color: Colors.white)),
+                            labelText: 'Password',
+                            labelStyle: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         decoration: BoxDecoration(
-                            borderRadius:
-                            BorderRadius.all(Radius.circular(50.0)),
-                            color: Colors.black54),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(50.0),
+                          ),
+                          color: Colors.black54,
+                        ),
                         padding: EdgeInsets.all(10.0),
                       ),
                     ],
@@ -109,10 +120,16 @@ class _MsLoginPageState extends State<LoginPage> {
                   margin: EdgeInsets.all(50.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePage(),
+                        ),
+                      );
                     },
-                    style: ElevatedButton.styleFrom(primary: Color(0xff790507)),
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xff790507),
+                    ),
                     child: Text(
                       "Login",
                       style: TextStyle(fontSize: 20.0),
@@ -121,9 +138,9 @@ class _MsLoginPageState extends State<LoginPage> {
                 ),
               ],
             ),
-          )),
-        ));
+          ),
+        ),
+      ),
+    );
   }
-//Scaffold creates a white background, allows for ability to add app bar etc.
-
 }
