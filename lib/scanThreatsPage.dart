@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:mobileshielding/homepageButtons.dart';
+import 'package:mobileshielding/report.dart';
 
 void main() => runApp(ScanThreatsPage());
 
@@ -170,7 +171,7 @@ class _scanThreatsPage extends State<ScanTPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ScanThreatsPage()));
+                                    builder: (context) => ReportPage()));
                           },
                           style: ElevatedButton.styleFrom(
                               primary: Colors.redAccent),
