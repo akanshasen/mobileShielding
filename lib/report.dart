@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'homepageButtons.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ReportPage extends StatefulWidget {
   @override
@@ -83,13 +83,25 @@ class _reportPageState extends State<ReportPage> {
                             builder: (context) => ReportPage(),
                           ),
                         );
+                        Fluttertoast.showToast(
+                          msg: "Report was submitted! Thank you.",
+                          toastLength: Toast.LENGTH_SHORT,
+                          gravity: ToastGravity.TOP,
+                          timeInSecForIosWeb: 1,
+                          textColor: Colors.white,
+                          fontSize: 66.0,
+                        );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xff790507),
+                        primary: Color(
+                          0xff790507,
+                        ),
                       ),
                       child: Text(
                         "Submit",
-                        style: TextStyle(fontSize: 20.0),
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
                       ),
                     ),
                   ),
