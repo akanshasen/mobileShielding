@@ -162,23 +162,17 @@ class _scanThreatsPage extends State<ScanAPage> {
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.only(top: 80.0),
-                        width: 250.0,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ScanAppPage()));
-                          },
-                          style: ElevatedButton.styleFrom(
-                              primary: Colors.redAccent),
-                          child: Text(
-                            'Report Collusion',
-                            style: TextStyle(color: Colors.white, fontSize: 25),
+                      Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(
+                              top: 30.0,
+                            ),
+                            child: Text(
+                              'No App Collusions Found!',
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
