@@ -10,18 +10,34 @@ class HomePage extends StatelessWidget {
     final size = 300.0;
 
     return MaterialApp(
+      theme: ThemeData(
+          brightness: Brightness.dark, primaryColor: Color(0xff790507)),
       debugShowCheckedModeBanner: false,
       home: Builder(
         builder: (context) => Scaffold(
           appBar: AppBar(
-            leading: IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {},
-            ),
             backgroundColor: Color(0xff790507),
             title: Text('Home'),
           ),
-          backgroundColor: Color(0xffffffff),
+          drawer: new Drawer(
+            child: ListView(
+              children: [
+                new UserAccountsDrawerHeader(
+                  accountName: new Text(
+                    'Akansha Sen',
+                  ),
+                  accountEmail: new Text(
+                    'akanshasen@msd.com',
+                  ),
+                  currentAccountPicture: new CircleAvatar(
+                    backgroundImage:
+                        new AssetImage('assets/MobileShieldingLogo.jpg'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          //backgroundColor: Color(0xffffffff),
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -41,12 +57,12 @@ class HomePage extends StatelessWidget {
                               shaderCallback: (rect) {
                                 return SweepGradient(
                                     startAngle: 0.0,
-                                    endAngle: TWO_PI,
+                                    endAngle: 6.3,
                                     stops: [value, value],
                                     center: Alignment.center,
                                     colors: [
                                       Colors.green,
-                                      Colors.grey.withAlpha(55)
+                                      Colors.pinkAccent.withAlpha(55)
                                     ]).createShader(rect);
                               },
                               child: Container(
@@ -69,7 +85,8 @@ class HomePage extends StatelessWidget {
                                 child: Center(
                                   child: Text(
                                     "    $percentage%" + "\nOptimized",
-                                    style: TextStyle(fontSize: 50),
+                                    style: TextStyle(
+                                        fontSize: 50, color: Colors.black),
                                   ),
                                 ),
                               ),
@@ -100,9 +117,12 @@ class HomePage extends StatelessWidget {
                               );
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Colors.deepOrangeAccent),
+                              primary: Color(0xff741819),
+                              shadowColor: Colors.lightBlueAccent,
+                              elevation: 20.0,
+                            ),
                             child: Text(
-                              'Scan App',
+                              'Scan Apps',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 23,
@@ -124,7 +144,10 @@ class HomePage extends StatelessWidget {
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                              primary: Colors.deepOrangeAccent),
+                            primary: Color(0xff741819),
+                            shadowColor: Colors.lightBlueAccent,
+                            elevation: 10.0,
+                          ),
                           child: Text(
                             'Find Threats',
                             style: TextStyle(
@@ -150,7 +173,10 @@ class HomePage extends StatelessWidget {
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                                primary: Colors.deepOrangeAccent),
+                              primary: Color(0xff741819),
+                              shadowColor: Colors.lightBlueAccent,
+                              elevation: 10.0,
+                            ),
                             child: Text(
                               'Scan WiFi',
                               style: TextStyle(
@@ -167,7 +193,10 @@ class HomePage extends StatelessWidget {
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                              primary: Colors.deepOrangeAccent),
+                            primary: Color(0xff741819),
+                            shadowColor: Colors.lightBlueAccent,
+                            elevation: 10.0,
+                          ),
                           child: Text(
                             'Clean Device',
                             style: TextStyle(
