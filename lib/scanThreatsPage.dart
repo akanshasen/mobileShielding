@@ -166,14 +166,18 @@ class _scanThreatsPage extends State<ScanTPage> {
                                   builder: (context) => ScanThreatsPage()));
                         },
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.deepOrangeAccent),
+                          padding: EdgeInsets.all(15.0),
+                          primary: Color(0xff741819),
+                          shadowColor: Colors.lightBlueAccent,
+                          elevation: 10.0,
+                        ),
                         child: Text(
                           'Rescan Threats',
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 80.0),
+                        padding: EdgeInsets.only(top: 60.0),
                         width: 250.0,
                         child: ElevatedButton(
                           onPressed: () {
@@ -183,9 +187,13 @@ class _scanThreatsPage extends State<ScanTPage> {
                                     builder: (context) => ReportPage()));
                           },
                           style: ElevatedButton.styleFrom(
-                              primary: Colors.redAccent),
+                            padding: EdgeInsets.all(15.0),
+                            primary: Color(0xff741819),
+                            shadowColor: Colors.purple,
+                            elevation: 10.0,
+                          ),
                           child: Text(
-                            'Report Threat',
+                            'REPORT THREAT',
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
                         ),

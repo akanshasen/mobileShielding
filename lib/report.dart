@@ -98,9 +98,10 @@ class _reportPageState extends State<ReportPage> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(
-                          0xff790507,
-                        ),
+                        padding: EdgeInsets.all(15.0),
+                        primary: Color(0xff741819),
+                        shadowColor: Colors.lightBlueAccent,
+                        elevation: 10.0,
                       ),
                       child: Text(
                         "Submit",

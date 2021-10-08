@@ -170,7 +170,11 @@ class _scanWiFiPage extends State<ScanWPage> {
                           );
                         },
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.deepOrangeAccent),
+                          padding: EdgeInsets.all(15.0),
+                          primary: Color(0xff741819),
+                          shadowColor: Colors.lightBlueAccent,
+                          elevation: 10.0,
+                        ),
                         child: Text(
                           'Rescan WiFi',
                           style: TextStyle(
