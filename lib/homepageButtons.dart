@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobileshielding/scanAppPage.dart';
 import 'package:mobileshielding/scanThreatsPage.dart';
+import 'package:mobileshielding/scanWiFiPage.dart';
 
 import 'history.dart';
 
@@ -42,7 +43,7 @@ class HomePage extends StatelessWidget {
                 ),
                 new ListTile(
                   title: new Text('Scan Apps'),
-                  onTap: (){
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -53,7 +54,7 @@ class HomePage extends StatelessWidget {
                 ),
                 new ListTile(
                   title: new Text('Scan Threats'),
-                  onTap: (){
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -64,7 +65,7 @@ class HomePage extends StatelessWidget {
                 ),
                 new ListTile(
                   title: new Text('History'),
-                  onTap: (){
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -212,7 +213,14 @@ class HomePage extends StatelessWidget {
                           height: 70.0,
                           width: 180.0,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ScanWPage(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               primary: Color(0xff741819),
                               shadowColor: Colors.lightBlueAccent,
