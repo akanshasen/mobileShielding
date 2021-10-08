@@ -1,13 +1,7 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:mobileshielding/homepageButtons.dart';
-import 'package:mobileshielding/report.dart';
 
-void main() => runApp(ScanThreatsPage());
-
-class ScanThreatsPage extends StatelessWidget {
-  // This widget is the root of your application.
+class CleanDevicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,18 +9,18 @@ class ScanThreatsPage extends StatelessWidget {
         brightness: Brightness.dark,
         primaryColor: Color(0xff790507),
       ),
-      home: ScanTPage(),
+      home: CleanDPage(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class ScanTPage extends StatefulWidget {
+class CleanDPage extends StatefulWidget {
   @override
-  _scanThreatsPage createState() => _scanThreatsPage();
+  _cleanDevicePage createState() => _cleanDevicePage();
 }
 
-class _scanThreatsPage extends State<ScanTPage> {
+class _cleanDevicePage extends State<CleanDPage> {
   final size = 200.0;
 
   @override
@@ -57,6 +51,7 @@ class _scanThreatsPage extends State<ScanTPage> {
                         icon: Icon(Icons.menu),
                         color: Colors.white,
                         onPressed: () {},
+                        //padding: EdgeInsets.only(left: 90.0),
                       )
                     ],
                   ),
@@ -70,7 +65,7 @@ class _scanThreatsPage extends State<ScanTPage> {
             child: Row(
               children: <Widget>[
                 Text(
-                  'Scanning for Threats',
+                  'Cleaning Device',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w400,
@@ -96,7 +91,7 @@ class _scanThreatsPage extends State<ScanTPage> {
                   tween: Tween(begin: 0.0, end: 1.0),
                   duration: Duration(seconds: 4),
                   builder: (context, double value, child) {
-                    int percentage = (value * 27).ceil();
+                    int percentage = (value * 100).ceil();
                     return Container(
                       width: size,
                       height: size,
@@ -106,7 +101,7 @@ class _scanThreatsPage extends State<ScanTPage> {
                             shaderCallback: (rect) {
                               return SweepGradient(
                                   startAngle: 0.0,
-                                  endAngle: 1.73,
+                                  endAngle: TWO_PI,
                                   stops: [
                                     value,
                                     value,
@@ -120,7 +115,9 @@ class _scanThreatsPage extends State<ScanTPage> {
                               width: size,
                               height: size,
                               decoration: BoxDecoration(
-                                  shape: BoxShape.circle, color: Colors.white),
+                                shape: BoxShape.circle,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                           Center(
@@ -132,13 +129,23 @@ class _scanThreatsPage extends State<ScanTPage> {
                                 shape: BoxShape.circle,
                               ),
                               child: Center(
-                                child: Text(
-                                  "$percentage%" + "\nSafe",
-                                  style: TextStyle(
-                                    fontSize: 30,
-                                    color: Colors.black,
+                                child: IconButton(
+                                  icon: Icon(
+                                    Icons.delete_rounded,
+                                    size: 80.0,
+                                  ),
+                                  color: Colors.black,
+                                  onPressed: () {},
+                                  padding: EdgeInsets.only(
+                                    right: 55.0,
+                                    bottom: 50.0,
                                   ),
                                 ),
+                                // child: Text(
+                                //   "$percentage%" + "\nSafe",
+                                //   style: TextStyle(
+                                //       fontSize: 30, color: Colors.black),
+                                // ),
                               ),
                             ),
                           ),
@@ -156,9 +163,11 @@ class _scanThreatsPage extends State<ScanTPage> {
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ScanThreatsPage()));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CleanDevicePage(),
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.all(15.0),
@@ -167,31 +176,29 @@ class _scanThreatsPage extends State<ScanTPage> {
                           elevation: 10.0,
                         ),
                         child: Text(
-                          'Rescan Threats',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          'Re-run Clean Device',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.only(top: 60.0),
-                        width: 250.0,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ReportPage()));
-                          },
-                          style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.all(15.0),
-                            primary: Color(0xff741819),
-                            shadowColor: Colors.purple,
-                            elevation: 10.0,
+                      Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(
+                              top: 25.0,
+                            ),
+                            child: Text(
+                              'Device is all clean!',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16.0,
+                              ),
+                            ),
                           ),
-                          child: Text(
-                            'REPORT THREAT',
-                            style: TextStyle(color: Colors.white, fontSize: 25),
-                          ),
-                        ),
+                        ],
                       ),
                     ],
                   ),

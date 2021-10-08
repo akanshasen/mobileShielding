@@ -3,6 +3,7 @@ import 'package:mobileshielding/scanAppPage.dart';
 import 'package:mobileshielding/scanThreatsPage.dart';
 import 'package:mobileshielding/scanWiFiPage.dart';
 
+import 'cleanDevicePage.dart';
 import 'history.dart';
 
 const TWO_PI = 3.14 * 2;
@@ -59,6 +60,17 @@ class HomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => ScanTPage(),
+                      ),
+                    );
+                  },
+                ),
+                new ListTile(
+                  title: new Text('Scan WiFi'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ScanWPage(),
                       ),
                     );
                   },
@@ -240,7 +252,14 @@ class HomePage extends StatelessWidget {
                         height: 70.0,
                         width: 180.0,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CleanDevicePage(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: Color(0xff741819),
                             shadowColor: Colors.lightBlueAccent,
