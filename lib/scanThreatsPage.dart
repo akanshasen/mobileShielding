@@ -11,6 +11,10 @@ class ScanThreatsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Color(0xff790507),
+      ),
       home: ScanTPage(),
       debugShowCheckedModeBanner: false,
     );
@@ -86,7 +90,7 @@ class _scanThreatsPage extends State<ScanTPage> {
             padding: EdgeInsets.only(top: 20.0),
             height: MediaQuery.of(context).size.height - 185.0,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color(0xff2e2e2f),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(75.0),
               ),
@@ -114,7 +118,7 @@ class _scanThreatsPage extends State<ScanTPage> {
                                   ],
                                   colors: [
                                     Colors.green,
-                                    Colors.red.withAlpha(55)
+                                    Colors.pink.withAlpha(55)
                                   ]).createShader(rect);
                             },
                             child: Container(
@@ -129,11 +133,16 @@ class _scanThreatsPage extends State<ScanTPage> {
                               width: size - 40,
                               height: size - 40,
                               decoration: BoxDecoration(
-                                  color: Colors.white, shape: BoxShape.circle),
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                              ),
                               child: Center(
                                 child: Text(
                                   "$percentage%" + "\nSafe",
-                                  style: TextStyle(fontSize: 30),
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.black,
+                                  ),
                                 ),
                               ),
                             ),

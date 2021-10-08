@@ -11,13 +11,17 @@ class HomePage extends StatelessWidget {
 
     return MaterialApp(
       theme: ThemeData(
-          brightness: Brightness.dark, primaryColor: Color(0xff790507)),
+        brightness: Brightness.dark,
+        primaryColor: Color(0xff790507),
+      ),
       debugShowCheckedModeBanner: false,
       home: Builder(
         builder: (context) => Scaffold(
           appBar: AppBar(
             backgroundColor: Color(0xff790507),
-            title: Text('Home'),
+            title: Text(
+              'Home',
+            ),
           ),
           drawer: new Drawer(
             child: ListView(
@@ -86,7 +90,9 @@ class HomePage extends StatelessWidget {
                                   child: Text(
                                     "    $percentage%" + "\nOptimized",
                                     style: TextStyle(
-                                        fontSize: 50, color: Colors.black),
+                                      fontSize: 50,
+                                      color: Colors.black,
+                                    ),
                                   ),
                                 ),
                               ),

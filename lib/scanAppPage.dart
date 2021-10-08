@@ -10,6 +10,10 @@ class ScanAppPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Color(0xff790507),
+      ),
       home: ScanAPage(),
       debugShowCheckedModeBanner: false,
     );
@@ -44,19 +48,15 @@ class _scanThreatsPage extends State<ScanAPage> {
                   },
                 ),
                 Container(
-                  width: 125.0,
+                  width: 50.0,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.filter_list),
-                        color: Colors.white,
-                        onPressed: () {},
-                      ),
-                      IconButton(
                         icon: Icon(Icons.menu),
                         color: Colors.white,
                         onPressed: () {},
+                        //padding: EdgeInsets.only(left: 90.0),
                       )
                     ],
                   ),
@@ -85,7 +85,7 @@ class _scanThreatsPage extends State<ScanAPage> {
             padding: EdgeInsets.only(top: 20.0),
             height: MediaQuery.of(context).size.height - 185.0,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color(0xff2e2e2f),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(75.0),
               ),
@@ -113,14 +113,16 @@ class _scanThreatsPage extends State<ScanAPage> {
                                   ],
                                   colors: [
                                     Colors.green,
-                                    Colors.red.withAlpha(55)
+                                    Colors.pink.withAlpha(55)
                                   ]).createShader(rect);
                             },
                             child: Container(
                               width: size,
                               height: size,
                               decoration: BoxDecoration(
-                                  shape: BoxShape.circle, color: Colors.white),
+                                shape: BoxShape.circle,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                           Center(
@@ -132,7 +134,8 @@ class _scanThreatsPage extends State<ScanAPage> {
                               child: Center(
                                 child: Text(
                                   "$percentage%" + "\nSafe",
-                                  style: TextStyle(fontSize: 30),
+                                  style: TextStyle(
+                                      fontSize: 30, color: Colors.black),
                                 ),
                               ),
                             ),
@@ -151,25 +154,35 @@ class _scanThreatsPage extends State<ScanAPage> {
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ScanAppPage()));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ScanAppPage(),
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                             primary: Colors.deepOrangeAccent),
                         child: Text(
                           'Rescan Apps',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
                         ),
                       ),
                       Column(
                         children: [
                           Container(
                             padding: EdgeInsets.only(
-                              top: 30.0,
+                              top: 25.0,
                             ),
                             child: Text(
                               'No App Collusions Found!',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16.0,
+                              ),
                             ),
                           ),
                         ],

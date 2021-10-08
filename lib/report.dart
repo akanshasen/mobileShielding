@@ -10,6 +10,10 @@ class _reportPageState extends State<ReportPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Color(0xff790507),
+      ),
       debugShowCheckedModeBanner: false,
       home: Builder(
         builder: (context) => Scaffold(
