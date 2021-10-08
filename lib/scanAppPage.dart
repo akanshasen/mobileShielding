@@ -2,6 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:mobileshielding/homepageButtons.dart';
+import 'package:mobileshielding/scanThreatsPage.dart';
+import 'package:mobileshielding/scanWiFiPage.dart';
+
+import 'cleanDevicePage.dart';
+import 'history.dart';
+import 'loginpage.dart';
 
 void main() => runApp(ScanAppPage());
 
@@ -55,9 +61,97 @@ class _scanThreatsPage extends State<ScanAPage> {
                       IconButton(
                         icon: Icon(Icons.menu),
                         color: Colors.white,
-                        onPressed: () {},
+                        onPressed: () {
+
+                          new Drawer(
+                            child: ListView(
+                              children: [
+                                new UserAccountsDrawerHeader(
+                                  accountName: new Text(
+                                    'Akansha Sen',
+                                  ),
+                                  accountEmail: new Text(
+                                    'akanshasen@msd.com',
+                                  ),
+                                  currentAccountPicture: new CircleAvatar(
+                                    backgroundImage:
+                                    new AssetImage('assets/MobileShieldingLogo.jpg'),
+                                  ),
+                                ),
+                                new ListTile(
+                                  title: new Text('Scan Apps'),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ScanAppPage(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                new ListTile(
+                                  title: new Text('Scan Threats'),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ScanTPage(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                new ListTile(
+                                  title: new Text('Scan WiFi'),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ScanWPage(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                new ListTile(
+                                  title: new Text('Clean Device'),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => CleanDPage(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                new ListTile(
+                                  title: new Text('History'),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => HistoryPage(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                new ListTile(
+                                  title: new Text('Log out'),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => LoginPage(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ],
+                            ),
+                          );
+                        },
                         //padding: EdgeInsets.only(left: 90.0),
-                      )
+                      ),
+
+                      //Drawer()
                     ],
                   ),
                 ),

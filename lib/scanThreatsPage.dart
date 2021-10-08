@@ -113,7 +113,7 @@ class _scanThreatsPage extends State<ScanTPage> {
                                   ],
                                   colors: [
                                     Colors.green,
-                                    Colors.pink.withAlpha(55)
+                                    Colors.pink.withAlpha(150)
                                   ]).createShader(rect);
                             },
                             child: Container(
@@ -148,7 +148,7 @@ class _scanThreatsPage extends State<ScanTPage> {
                   },
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.only(top: 40.0),
                   height: size,
                   width: 280.0,
                   child: Column(
@@ -172,7 +172,7 @@ class _scanThreatsPage extends State<ScanTPage> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 60.0),
+                        padding: EdgeInsets.only(top: 40.0),
                         width: 250.0,
                         child: ElevatedButton(
                           onPressed: () {

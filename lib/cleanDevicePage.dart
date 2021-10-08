@@ -72,6 +72,7 @@ class _cleanDevicePage extends State<CleanDPage> {
                     fontSize: 25.0,
                   ),
                 ),
+
               ],
             ),
           ),

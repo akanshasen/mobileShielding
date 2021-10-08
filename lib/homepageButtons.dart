@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobileshielding/loginpage.dart';
 import 'package:mobileshielding/scanAppPage.dart';
 import 'package:mobileshielding/scanThreatsPage.dart';
 import 'package:mobileshielding/scanWiFiPage.dart';
@@ -76,12 +77,34 @@ class HomePage extends StatelessWidget {
                   },
                 ),
                 new ListTile(
+                  title: new Text('Clean Device'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CleanDPage(),
+                      ),
+                    );
+                  },
+                ),
+                new ListTile(
                   title: new Text('History'),
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => HistoryPage(),
+                      ),
+                    );
+                  },
+                ),
+                new ListTile(
+                  title: new Text('Log out'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginPage(),
                       ),
                     );
                   },
