@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mobileshielding/scanAppPage.dart';
 import 'package:mobileshielding/scanThreatsPage.dart';
 
+import 'history.dart';
+
 const TWO_PI = 3.14 * 2;
 
 class HomePage extends StatelessWidget {
@@ -37,6 +39,39 @@ class HomePage extends StatelessWidget {
                     backgroundImage:
                         new AssetImage('assets/MobileShieldingLogo.jpg'),
                   ),
+                ),
+                new ListTile(
+                  title: new Text('Scan Apps'),
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ScanAppPage(),
+                      ),
+                    );
+                  },
+                ),
+                new ListTile(
+                  title: new Text('Scan Threats'),
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ScanTPage(),
+                      ),
+                    );
+                  },
+                ),
+                new ListTile(
+                  title: new Text('History'),
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HistoryPage(),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),

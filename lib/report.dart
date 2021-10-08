@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:mobileshielding/history.dart';
 
 class ReportPage extends StatefulWidget {
   @override
@@ -84,7 +85,7 @@ class _reportPageState extends State<ReportPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ReportPage(),
+                            builder: (context) => HistoryPage(),
                           ),
                         );
                         Fluttertoast.showToast(
