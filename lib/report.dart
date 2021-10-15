@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mobileshielding/history.dart';
+import 'package:mobileshielding/scanThreatsPage.dart';
 
 class ReportPage extends StatefulWidget {
   @override
@@ -20,8 +21,16 @@ class _reportPageState extends State<ReportPage> {
         builder: (context) => Scaffold(
           appBar: AppBar(
             leading: IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {},
+              icon: Icon(Icons.arrow_back_sharp),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ScanTPage(),
+                  ),
+                );
+              },
             ),
             backgroundColor: Color(0xff790507),
             title: Text('Report Threat'),

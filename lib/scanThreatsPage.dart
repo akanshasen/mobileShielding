@@ -48,19 +48,6 @@ class _scanThreatsPage extends State<ScanTPage> {
                         MaterialPageRoute(builder: (context) => HomePage()));
                   },
                 ),
-                Container(
-                  width: 50.0,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      IconButton(
-                        icon: Icon(Icons.menu),
-                        color: Colors.white,
-                        onPressed: () {},
-                      )
-                    ],
-                  ),
-                ),
               ],
             ),
           ),

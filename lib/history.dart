@@ -20,8 +20,16 @@ class _historyPageState extends State<HistoryPage> {
         builder: (context) => Scaffold(
           appBar: AppBar(
             leading: IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {},
+              icon: Icon(Icons.arrow_back_sharp),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ReportPage(),
+                  ),
+                );
+              },
             ),
             backgroundColor: Color(0xff790507),
             title: Text('History of Threats and Reports'),
@@ -96,7 +104,10 @@ class _historyPageState extends State<HistoryPage> {
                   Container(
                     height: 50.0,
                     width: 250.0,
-                    margin: EdgeInsets.only(top: 5.0, bottom: 15.0,),
+                    margin: EdgeInsets.only(
+                      top: 5.0,
+                      bottom: 15.0,
+                    ),
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(

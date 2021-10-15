@@ -42,20 +42,6 @@ class _scanWiFiPage extends State<ScanWPage> {
                         MaterialPageRoute(builder: (context) => HomePage()));
                   },
                 ),
-                Container(
-                  width: 50.0,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      IconButton(
-                        icon: Icon(Icons.menu),
-                        color: Colors.white,
-                        onPressed: () {},
-                        //padding: EdgeInsets.only(left: 90.0),
-                      )
-                    ],
-                  ),
-                ),
               ],
             ),
           ),
