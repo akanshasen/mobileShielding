@@ -28,6 +28,18 @@ Follow Instructions below to compile the project.
 ```sh
       git clone https://github.com/akanshasen/mobileShielding.git 
 ```
-3. 
+   Upon opening the project in Android Studios there might be errors seen in all files. To solve this, simply click on ``sh Get Dependencies`` for Pub Get to run.
+   ![image](https://user-images.githubusercontent.com/64461053/138622573-ced35329-87b7-46b6-9c4e-2cd4d3379043.png)
+
+2. Open the terminal and run flutter, ensure the Android/iOS Emulator is open. 
+```sh
+      flutter run 
+```
+  This can take some time to start.
+  
+Enjoy the application 😊
+
+## Contribution
+I have contributed on this project as a UI/UX designer hence the project is primarly focused on its UI.
 
 
