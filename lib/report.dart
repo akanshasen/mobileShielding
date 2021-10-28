@@ -60,27 +60,27 @@ class _reportPageState extends State<ReportPage> {
                       children: [
                         TextFormField(
                           maxLength: 50,
-                          decoration: InputDecoration(labelText: 'Your Name'),
+                          decoration: InputDecoration(labelText: 'Your Name: Akansha'),
                         ),
                         TextFormField(
                           maxLength: 20,
                           decoration:
-                              InputDecoration(labelText: 'Phone Number'),
+                              InputDecoration(labelText: 'Device used: Oppo'),
                         ),
                         TextFormField(
                           maxLength: 30,
                           decoration:
-                              InputDecoration(labelText: 'Email Address'),
+                              InputDecoration(labelText: 'Android Version: 11'),
                         ),
                         TextFormField(
                           maxLength: 280,
                           decoration:
-                              InputDecoration(labelText: 'Threat Description'),
+                              InputDecoration(labelText: 'Reporting Incident: '),
                         ),
                         TextFormField(
                           maxLength: 30,
                           decoration: InputDecoration(
-                              labelText: 'Device (Android/iOS)'),
+                              labelText: 'Found in: '),
                         ),
                       ],
                     ),
