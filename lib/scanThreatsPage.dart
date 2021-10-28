@@ -171,11 +171,11 @@ class _scanThreatsPage extends State<ScanTPage> {
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.all(15.0),
                             primary: Color(0xff741819),
-                            shadowColor: Colors.purple,
+                            shadowColor: Colors.lightBlueAccent,
                             elevation: 10.0,
                           ),
                           child: Text(
-                            'REPORT THREAT',
+                            'REPORT THREAT!',
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
                         ),
