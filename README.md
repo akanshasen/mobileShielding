@@ -34,7 +34,7 @@ Follow Instructions below to compile the project.
    
    ![image](https://user-images.githubusercontent.com/64461053/138622573-ced35329-87b7-46b6-9c4e-2cd4d3379043.png)
 
-2. Open the terminal and run flutter, ensure the Android/iOS Emulator is open. 
+2. Open the terminal and run flutter, ensure the Android/iOS Emulator is open. Make sure to have the Android/iOS emulator open. 
 ```sh
       flutter run 
 ```
