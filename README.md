@@ -40,6 +40,8 @@ Follow Instructions below to compile the project.
 ```
   This can take some time to start.
   
+  When you see the login screen, you have successfully ran the project!
+  
 Enjoy the application 😊
 
 ## Contribution
