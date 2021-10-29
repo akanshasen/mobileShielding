@@ -6,10 +6,12 @@
 Mobile Shielding is a mobile application that aims to help mobile device users detect app collusions and any threats that their mobile devices are vulnerable to. Designed for both Android and iOS operating systems. 
 
 The core functionalities Mobile Shielding desires to implement are:
+      
+      🔳 Scanning for App Collusions
 
       🔳 Finding Threats
  
-      🔳 Scanning for App Collusions
+      
 
 ## Project Motivation and Problem ⚠️
 As technology evolves in providing greater ease of life, people are spending more and more time on their devices. From completing academic work to searching how to do a DIY project - everything starts on the devices. Mobile phones are high in use as it helps for better portable device, enables communication between people, ability to shop online, and many other tasks. However, in doing so, one very important point of consideration is security. In particular, research has said Android based OS devices are vulnerable to application collusions. 
